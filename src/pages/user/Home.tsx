@@ -11,6 +11,12 @@ const Home = () => {
             <Input
                 label="label"
                 placeholder="ini"
+                beginningIcon={<AiOutlineSearch size={23}/>}
+            />
+            <Input
+                label="label"
+                placeholder="ini"
+                beginningIcon={<AiOutlineSearch size={23}/>}
             />
             <div className="w-[200px]">
                 <Button
