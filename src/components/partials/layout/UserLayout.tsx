@@ -1,4 +1,4 @@
-import Navbar from "../appbar/Navbar";
+import Navbar from "@/components/partials/appbar/Navbar";
 
 const UserLayout = ({ children }: { children: React.ReactNode }) => {
     return (
