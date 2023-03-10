@@ -9,11 +9,11 @@ const Button = ({ children, beginningIcon, endIcon, className, color, ...rest }:
     const additionalClassname = checkColorType(color)
 
     return (
-        <button className={`flex items-center relative p-3 min-w-[30px] rounded-lg transition duration-200 disabled:cursor-not-allowed ${additionalClassname}`} {...rest}>
+        <button className={`flex items-center justify-center relative p-3 min-w-[30px] rounded-lg transition duration-200 disabled:cursor-not-allowed ${additionalClassname} ${className}`} {...rest}>
             <div className="mr-2">
                 {beginningIcon}
             </div>
-            <div className={`${className} `}>
+            <div>
                 {children}
             </div>
             <div className="ml-2">
@@ -40,7 +40,7 @@ const checkColorType = (color: string) => {
             className = "bg-transparent hover:underline active:no-underline text-red-600 disabled:text-red-100"
             break;
         case "secondary-grey":
-            className = "border-[1.5px] text-gray-600 border-gray-300 hover:border-gray-400 active:border-gray-300 focus:ring-[3px] focus:ring-gray-300 disabled:text-gray-300"
+            className = "border-[1.5px] bg-gray-50 text-gray-600 border-gray-300 hover:border-gray-400 active:border-gray-300 focus:ring-[3px] focus:ring-gray-300 disabled:text-gray-300"
             break;
         case "tertiary-grey":
             className = "border-[1.5px] text-gray-600 hover:bg-gray-100 border-none disabled:text-gray-300 disabled:bg-transparent"
