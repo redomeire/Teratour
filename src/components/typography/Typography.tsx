@@ -1,7 +1,7 @@
 
 
 interface TextProps extends React.HTMLProps<HTMLParagraphElement> {
-    variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "body",
+    variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "body" | "body2" | "",
     color?: string,
     className?: string
 }
@@ -39,6 +39,12 @@ const checkVariant = (name: string) => {
             break;
         case "body":
             variant = 'text-base'
+            break;
+        case "body2":
+            variant = 'text-sm'
+            break;
+        default:
+            variant=""
             break;
     }
     return variant
