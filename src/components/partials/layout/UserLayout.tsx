@@ -5,7 +5,7 @@ const UserLayout = ({ children }: { children: React.ReactNode }) => {
     return (
         <div>
             <Navbar />
-            <div className={`${ window.location.pathname === '/user/login' ? '' : 'pt-16' } pb-10 min-h-screen`}>
+            <div className={`${ window.location.pathname === '/user/login' ? '' : 'pt-16' } min-h-screen`}>
                 {children}
             </div>
             <Footer/>

@@ -1,6 +1,6 @@
 
 
-interface TextProps extends React.HTMLProps<HTMLParagraphElement> {
+export interface TextProps extends React.HTMLProps<HTMLParagraphElement> {
     variant: "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "body" | "body2" | "",
     color?: string,
     className?: string

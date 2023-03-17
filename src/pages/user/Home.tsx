@@ -21,6 +21,7 @@ import Itinerary from "@/assets/home/itinerary.png";
 import Tourguide from "@/assets/home/Tourguide.png";
 import OlehOleh from "@/assets/home/oleh_oleh.png";
 import ServicePattern from "@/assets/home/service_pattern.png";
+import Counter from "@/components/counter";
 
 const Home = () => {
     const sliderRef = React.useRef<any>();
@@ -107,19 +108,20 @@ const Home = () => {
                 <div className="-mb-24">
                     <div className="p-5 rounded-full bg-white mx-auto md:w-[60%] flex items-center justify-evenly shadow-lg">
                         <div className="text-center">
-                            <Typography variant="h2" className="font-bold">34</Typography>
+                            {/* <Typography variant="h2" className="font-bold">34</Typography> */}
+                            <Counter animateCount={1} from={0} to={34} variant="h2" className="font-bold text-3xl" />
                             <Typography variant="body2">Provinsi</Typography>
                         </div>
                         <div className="text-center">
-                            <Typography variant="h2" className="font-bold">514</Typography>
+                            <Counter animateCount={1} from={0} to={514} variant="h2" className="font-bold text-3xl" />
                             <Typography variant="body2">Kota</Typography>
                         </div>
                         <div className="text-center">
-                            <Typography variant="h2" className="font-bold">2552</Typography>
+                            <Counter animateCount={1} from={0} to={2552} variant="h2" className="font-bold text-3xl" />
                             <Typography variant="body2">Destinasi Wisata</Typography>
                         </div>
                         <div className="text-center">
-                            <Typography variant="h2" className="font-bold">987</Typography>
+                            <Counter animateCount={1} from={0} to={97} variant="h2" className="font-bold text-3xl" />
                             <Typography variant="body2">Tourguide</Typography>
                         </div>
                     </div>
@@ -135,8 +137,8 @@ const Home = () => {
                     <div className="md:ml-20 text-gray-200">
                         <Typography variant="body2">
                             Teratour adalah merupakan lorem ipsum dolor sit amet consectetur. Sed sagittis quis tristique purus faucibus. Purus posuere sit cursus ultricies volutpat molestie. Vehicula ultrices morbi vitae integer felis aliquet.
-                            <br/>
-                            <br/>
+                            <br />
+                            <br />
                             Teratour adalah merupakan lorem ipsum dolor sit amet consectetur. Sed sagittis quis tristique purus faucibus. Purus posuere sit cursus ultricies volutpat molestie. Vehicula ultrices morbi vitae integer felis aliquet.
                         </Typography>
                     </div>
@@ -149,7 +151,7 @@ const Home = () => {
                 <div className="w-full mt-10 flex items-center md:flex-row flex-col px-32">
                     <div className="p-5 rounded-lg flex flex-col items-center">
                         <div className="bg-white w-fit rounded-xl p-3">
-                            <img src={Island} className="w-[50px]"/>
+                            <img src={Island} className="w-[50px]" />
                         </div>
                         <div className="text-center">
                             <Typography variant="h6" className="font-semibold my-3">Destinasi Wisata</Typography>
@@ -158,7 +160,7 @@ const Home = () => {
                     </div>
                     <div className="p-5 rounded-lg flex flex-col items-center">
                         <div className="bg-white w-fit rounded-xl p-3">
-                            <img src={Itinerary} className="w-[50px]"/>
+                            <img src={Itinerary} className="w-[50px]" />
                         </div>
                         <div className="text-center">
                             <Typography variant="h6" className="font-semibold my-3">Destinasi Wisata</Typography>
@@ -167,7 +169,7 @@ const Home = () => {
                     </div>
                     <div className="p-5 rounded-lg flex flex-col items-center">
                         <div className="bg-white w-fit rounded-xl p-3">
-                            <img src={Tourguide} className="w-[50px]"/>
+                            <img src={Tourguide} className="w-[50px]" />
                         </div>
                         <div className="text-center">
                             <Typography variant="h6" className="font-semibold my-3">Destinasi Wisata</Typography>
@@ -176,7 +178,7 @@ const Home = () => {
                     </div>
                     <div className="p-5 rounded-lg flex flex-col items-center">
                         <div className="bg-white w-fit rounded-xl p-3">
-                            <img src={OlehOleh} className="w-[50px]"/>
+                            <img src={OlehOleh} className="w-[50px]" />
                         </div>
                         <div className="text-center">
                             <Typography variant="h6" className="font-semibold my-3">Destinasi Wisata</Typography>
