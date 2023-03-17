@@ -12,9 +12,12 @@ const LoginForm = () => {
         email: '',
         password: ''
     })
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState<any>()
 
     const handleSubmit = async (e: { preventDefault: () => void }) => {
         e.preventDefault()
+        setIsLoading(true)
 
         await axios.post('https://reqres.in/api/login', {
             email: forms.email,
@@ -28,13 +31,16 @@ const LoginForm = () => {
                     window.location.reload()
                 }, 1000);
             }).catch((err) => {
+                setIsLoading(false)
                 console.error(err)
+                setError(err.response.data.error)
             });
     }
 
     return (
         <form onSubmit={handleSubmit} className="p-7 rounded-xl md:w-[350px] bg-white ">
             <Typography variant="h4" className="font-bold mx-auto mb-5 text-center" >Masuk Akun</Typography>
+            <Typography variant="" className="mb-4 text-red-400">{error}</Typography>
             <Input
                 label="Email"
                 placeholder="Masukkan Email"
@@ -70,7 +76,7 @@ const LoginForm = () => {
                 </div>
                 <Button color="link" className="mt-1 text-sm">Lupa Password</Button>
             </div>
-            <Button color="primary" className="w-full mt-5">Masuk</Button>
+            <Button isLoading={isLoading} color="primary" className="w-full mt-5">Masuk</Button>
             <div className="relative mt-7">
                 <hr className="w-full h-[2px] bg-gray-300" />
                 <div className="absolute right-1/2 translate-x-[50%] -top-2 bg-white px-3">
