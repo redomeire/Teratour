@@ -13,6 +13,7 @@ const FilterCard = () => {
             <Card className="w-fit">
 
                 <Dropdown
+                    defaultOpen
                     floating={false}
                     title="Lokasi"
                 >
@@ -63,6 +64,7 @@ const FilterCard = () => {
                 </Dropdown>
                 <hr className="divide-y-8 mb-5" />
                 <Dropdown
+                    defaultOpen
                     floating={false}
                     title="Kategori Wisata"
                 >
@@ -113,11 +115,15 @@ const FilterCard = () => {
                     </div>
                 </Dropdown>
                 <hr className="divide-y-8 mb-5" />
-                <Dropdown floating={false} title="Rating">
+                <Dropdown
+                defaultOpen
+                floating={false} title="Rating">
                     <StarRating onChange={() => { }} rating={5} />
                 </Dropdown>
                 <hr className="divide-y-8 mb-5" />
-                <Dropdown floating={false} title="Harga">
+                <Dropdown 
+                defaultOpen
+                floating={false} title="Harga">
                     <div className="flex items-stretch mb-5">
                         <div className="w-[30px] flex items-center justify-center rounded-l-lg bg-neutral-300">
                             <Typography variant="body2" className="font-semibold">Rp</Typography>

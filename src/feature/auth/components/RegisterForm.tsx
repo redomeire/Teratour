@@ -12,29 +12,35 @@ const RegisterForm = () => {
         email: '',
         password: ''
     })
+    const [error, setError] = useState<any>();
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (e: { preventDefault: () => void }) => {
         e.preventDefault()
+        setIsLoading(true)
 
-        await axios.post('https://reqres.in/api/login', {
+        await axios.post('https://reqres.in/api/register', {
             email: forms.email,
             password: forms.password
         })
             .then((result) => {
                 console.log(result);
-                window.localStorage.setItem('token', result.data.token)
+                // window.localStorage.setItem('token', result.data.token)
 
                 setTimeout(() => {
                     window.location.reload()
                 }, 1000);
             }).catch((err) => {
                 console.error(err)
+                setIsLoading(false)
+                setError(err.response.data.error)
             });
     }
 
     return (
         <form onSubmit={handleSubmit} className="p-7 rounded-xl md:w-[350px] bg-white ">
             <Typography variant="h4" className="font-bold mx-auto mb-5 text-center" >Daftar Akun</Typography>
+            <Typography variant="" className="mb-4 text-red-400">{error}</Typography>
             <Input
                 label="Nama lengkap"
                 type="text"
@@ -107,7 +113,7 @@ const RegisterForm = () => {
                 </div>
                 <Button color="link" className="mt-1 text-sm">Lupa Password</Button>
             </div>
-            <Button color="primary" className="w-full mt-5">Masuk</Button>
+            <Button isLoading={isLoading} color="primary" className="w-full mt-5">Daftar</Button>
             <div className="relative mt-7">
                 <hr className="w-full h-[2px] bg-gray-300" />
                 <div className="absolute right-1/2 translate-x-[50%] -top-2 bg-white px-3">

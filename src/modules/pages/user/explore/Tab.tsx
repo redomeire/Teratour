@@ -1,15 +1,16 @@
-import { useState } from "react"
+import { useContext } from "react"
 
 import Button from "@/components/button/Button";
 import Typography from "@/components/typography/Typography";
+import { ExploreContext } from "@/context/ExploreContext";
 
 interface Tabs {
     item: string[]
 }
 
 const Tab = ({ item }: Tabs) => {
-    const [tab, setTab] = useState('Wisata');
-
+    const { tab, setTab } = useContext(ExploreContext);
+    
     return (
         <div className="flex items-center flex-wrap w-fit">
             {

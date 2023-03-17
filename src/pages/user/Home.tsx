@@ -54,7 +54,7 @@ const Home = () => {
                 <div>
                 </div>
             </section>
-            <section className="md:px-16 px-10 mt-72 bg-red-500 p-14 bg-blend-overlay bg-cover bg-center" style={{ backgroundImage: `url('${Pattern}')` }}>
+            <section className="md:px-16 px-10 mt-72 bg-red-700 p-14 bg-blend-overlay bg-cover bg-center" style={{ backgroundImage: `url('${Pattern}')` }}>
                 <Typography variant="h4" className="font-bold capitalize mb-2 -mt-48">kota destinasi wisata favorit</Typography>
                 <Typography variant="body2" className="capitalize">Temukan tujuan destinasi wisata setiap kota di seluruh indonesia</Typography>
                 <div className="relative mb-10">

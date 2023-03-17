@@ -1,6 +1,6 @@
 import CardSouvenir from "@/components/pages/user/Home/CardSouvenir";
 
-const WisataTab = () => {
+const SouvenirTab = () => {
     return (
         <div className="flex flex-wrap mt-5">
             <CardSouvenir />
@@ -19,4 +19,4 @@ const WisataTab = () => {
     );
 }
 
-export default WisataTab;
+export default SouvenirTab;

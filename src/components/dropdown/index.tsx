@@ -9,10 +9,11 @@ interface DropdownProps {
     floating: boolean
     children?: React.ReactNode
     selectedValue?: string,
+    defaultOpen?: boolean
 }
 
-const Dropdown = ({ title, children, floating, selectedValue}: DropdownProps) => {
-    const [isOpen, setIsOpen] = useState(true);
+const Dropdown = ({ title, children, floating, selectedValue, defaultOpen}: DropdownProps) => {
+    const [isOpen, setIsOpen] = useState(defaultOpen);
 
     return (
         <div className="relative min-w-[200px]">

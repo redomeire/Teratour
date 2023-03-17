@@ -11,7 +11,7 @@ export const ExploreContext = createContext<Ctx>({
 });
 
 const ExploreCtx = ({ children }: { children: React.ReactNode }) => {
-    const [tab, setTab] = useState('')
+    const [tab, setTab] = useState('Wisata')
     
     return(
         <ExploreContext.Provider value={{ tab, setTab }}>
