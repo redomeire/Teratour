@@ -1,11 +1,9 @@
-import Button from "@/components/button/Button";
 import Typography from "@/components/typography/Typography";
-import { AiFillHeart, AiTwotoneStar } from "react-icons/ai";
-import { GrLocation } from "react-icons/gr";
+import { AiTwotoneStar } from "react-icons/ai";
 
 const CardSouvenir = () => {
     return (
-        <div className="m-2 rounded-xl md:min-w-[250px] md:max-w-[250px] min-w-full transition duration-200 hover:shadow-lg shadow-sm min-h-[300px] bg-white border cursor-pointer">
+        <div className="m-[6px] rounded-xl md:min-w-[270px] md:max-w-[250px] min-w-full transition duration-200 hover:shadow-lg shadow-sm min-h-[300px] bg-white border cursor-pointer">
             <div className="bg-[url('https://images.unsplash.com/photo-1588315029754-2dd089d39a1a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80')] w-full min-h-[120px] bg-cover bg-center rounded-t-xl"></div>
             <div className="p-3">
                 <div className="flex items-center justify-between">

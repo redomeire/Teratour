@@ -1,6 +1,7 @@
 import { Routes, Route, Outlet } from "react-router-dom"
 import React from "react";
 import { UserAuthRoute, UserPrivateRoute } from "./components/routes/UserRoute";
+import ExploreContext from "@/context/ExploreContext";
 
 const Home = React.lazy(() => wait(1000).then(() => import('./pages/user/Home')))
 const Login = React.lazy(() => wait(1000).then(() => import('./pages/user/Login')))
@@ -12,9 +13,13 @@ function App() {
     <div className="App">
       <Routes>
         <Route element={<SuspenseWrapper />}>
-          <Route element={<UserPrivateRoute/>}>
+          <Route element={<UserPrivateRoute />}>
             <Route path="/" element={<Home />} />
-            <Route path="/user/explore" element={<UserExplore />} />
+            <Route path="/user/explore" element={
+              <ExploreContext>
+                <UserExplore />
+              </ExploreContext>
+            } />
           </Route>
           <Route element={<UserAuthRoute />}>
             <Route path="/user/login" element={<Login />} />

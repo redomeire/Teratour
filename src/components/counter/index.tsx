@@ -46,7 +46,7 @@ const Counter = ({ from, to, animateCount, ...rest }: Props) => {
         }
     }, [isInViewport])
 
-    return <p ref={ref} {...rest} >{isInViewport ? count : 'not in viewport'}</p>;
+    return <p ref={ref} {...rest} >{isInViewport ? count : to}</p>;
 }
 
 export default Counter;
